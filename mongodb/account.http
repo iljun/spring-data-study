@@ -1,0 +1,26 @@
+### GET acounts
+GET localhost:8080/api/accounts
+Content-Type: application/json
+
+### POST account
+POST localhost:8080/api/account
+Content-Type: application/json
+
+{
+  "firstName": "iljun",
+  "lastName": "won",
+  "email": "sumusb34@gmail.com"
+}
+
+### GET account
+GET localhost:8080/api/account/5faaac0a80f6991c6bf91e03
+Content-Type: application/json
+
+### PUT account
+PUT localhost:8080/api/account/5faaac0a80f6991c6bf91e03
+Content-Type: application/json
+
+{
+  "firstName": "iljun2",
+  "lastName": "won2"
+}

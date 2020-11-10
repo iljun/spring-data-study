@@ -1,2 +1,2 @@
 rootProject.name = 'spring-data-study'
-
+include 'mongodb'

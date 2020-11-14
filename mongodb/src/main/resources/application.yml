@@ -7,3 +7,7 @@ spring:
       password: password
       database: account
       authentication-database: admin
+management:
+  endpoint:
+    health:
+      enabled: true

@@ -1,9 +1,9 @@
 ### GET acounts
-GET localhost:8080/api/accounts
+GET localhost:8080/api/reactive/accounts
 Content-Type: application/json
 
 ### POST account
-POST localhost:8080/api/account
+POST localhost:8080/api/reactive/account
 Content-Type: application/json
 
 {
@@ -13,11 +13,11 @@ Content-Type: application/json
 }
 
 ### GET account
-GET localhost:8080/api/account/5faf9a21122e96043b80afd0
+GET localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
 Content-Type: application/json
 
 ### PUT account
-PUT localhost:8080/api/account/5faaac0a80f6991c6bf91e03
+PUT localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
 Content-Type: application/json
 
 {
@@ -25,6 +25,6 @@ Content-Type: application/json
   "lastName": "won2"
 }
 
-### DELETE Account
-DELETE localhost:8080/api/account/5faf9a21122e96043b80afd0
+### Delete Account
+DELETE localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
 Content-Type: application/json

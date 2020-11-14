@@ -43,6 +43,7 @@ public class AccountApi {
         Optional<Account> optionalAccount = accountRepository.findById(id);
         optionalAccount.orElseThrow(() -> new AccountException("not found account"));
         Account account = optionalAccount.get();
+        account.updateAccount(accountUpdateDto);
         account = accountRepository.save(account);
         return ResponseEntity.ok(account);
     }

@@ -1,0 +1,31 @@
+### GET accounts by custom
+GET localhost:8080/api/custom-accounts
+Content-Type: application/json
+
+
+### POST account
+POST localhost:8080/api/custom-account
+Content-Type: application/json
+
+{
+  "firstName": "iljun",
+  "lastName": "won",
+  "email": "sumusb34@gmail.com"
+}
+
+### GET account
+GET localhost:8080/api/custom-account/5fb0bdea77117f7433c954db
+Content-Type: application/json
+
+### PUT account
+PUT localhost:8080/api/custom-account/5fb0bdea77117f7433c954db
+Content-Type: application/json
+
+{
+  "firstName": "iljun2",
+  "lastName": "won2"
+}
+
+### DELETE Account
+DELETE localhost:8080/api/custom-account/5fb0bdea77117f7433c954db
+Content-Type: application/json

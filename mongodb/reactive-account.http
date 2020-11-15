@@ -1,0 +1,30 @@
+### GET acounts
+GET localhost:8080/api/reactive/accounts
+Content-Type: application/json
+
+### POST account
+POST localhost:8080/api/reactive/account
+Content-Type: application/json
+
+{
+  "firstName": "iljun",
+  "lastName": "won",
+  "email": "sumusb34@gmail.com"
+}
+
+### GET account
+GET localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
+Content-Type: application/json
+
+### PUT account
+PUT localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
+Content-Type: application/json
+
+{
+  "firstName": "iljun2",
+  "lastName": "won2"
+}
+
+### Delete Account
+DELETE localhost:8080/api/reactive/account/5faf9bc896a9415e6bf85319
+Content-Type: application/json

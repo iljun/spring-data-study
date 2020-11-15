@@ -1,0 +1,40 @@
+version: "3"
+services:
+  mongo:
+    image: mongo
+    ports:
+      - 27017:27017
+    environment:
+      MONGO_INITDB_ROOT_USERNAME: admin
+      MONGO_INITDB_ROOT_PASSWORD: password
+    container_name: mongo
+  mongo-express:
+    image: mongo-express
+    ports:
+      - 8081:8081
+    environment:
+      - ME_CONFIG_MONGODB_ADMIN_USERNAME=admin
+      - ME_CONFIG_MONGODB_ADMIN_PASSWORD=password
+      - ME_CONFIG_MONGODB_ENABLE_ADMIN=true
+      - ME_CONFIG_MONGODB_AUTH_DATABASE=account
+      - ME_CONFIG_MONGODB_AUTH_USERNAME=admin
+      - ME_CONFIG_MONGODB_AUTH_PASSWORD=password
+      - ME_CONFIG_MONGODB_SERVER=mongo
+      - ME_CONFIG_BASICAUTH_USERNAME=admin
+      - ME_CONFIG_BASICAUTH_PASSWORD=password
+      - ME_CONFIG_
+    container_name: mongo-express
+    links:
+      - mongo
+  mongo-exmaple:
+    image: mongo-example
+    depends_on:
+      - mongo
+    ports:
+      - 8080:8080
+    container_name: mongo-example
+    links:
+      - mongo
+      - mongo-express
+    environment:
+      - spring.data.mongodb.host=host.docker.internal

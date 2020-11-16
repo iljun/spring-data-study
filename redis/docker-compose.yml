@@ -1,0 +1,20 @@
+version: "3"
+services:
+  redis:
+    image: redis
+    ports:
+      - 6379:6379
+    environment:
+      REQUIREPASS: password
+    container_name: redis
+  redis-exmaple:
+    image: redis-example
+    depends_on:
+      - redis
+    ports:
+      - 8080:8080
+    container_name: redis-example
+    links:
+      - redis
+    environment:
+      - spring.redis.host=host.docker.internal
